@@ -3,8 +3,10 @@
 @theme {
   --color-pink: #deb3c3;
   --color-purple: #433285;
-  --color-white: #ffffff;
+  --color-dark-purple: #241531;
   --color-comment: #6f556d;
+  --color-orange: #241531;
+  --color-light-orange: #eb988c;
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   --font-mono: var(--font-mono);
