@@ -6,8 +6,9 @@
   --color-light-purple: #a788b2;
   --color-dark-purple: #241531;
   --color-comment: #6f556d;
-  --color-orange: #241531;
+  --color-orange: #e5604d;
   --color-light-orange: #eb988c;
+  --color-background: #dfacbb;
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   --font-mono: var(--font-mono);

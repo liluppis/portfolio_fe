@@ -22,10 +22,6 @@ export interface TimelineProps {
   children?: React.ReactNode
 }
 
-/**
- * Flexible Timeline component for creating visual line elements
- * Can be used for various layouts: vertical timelines, horizontal connectors, L-shapes, etc.
- */
 export const Timeline: React.FC<TimelineProps> = ({
   segments = [],
   branches = [],
@@ -46,30 +42,26 @@ export interface TimelineLineProps {
   style?: React.CSSProperties
 }
 
-/**
- * Basic line primitive for building timelines
- */
 export const TimelineLine: React.FC<TimelineLineProps> = ({
   direction,
   length = "100%",
   thickness = "10px",
-  color = "purple",
+  color,
   className = "",
   style = {},
 }) => {
   const isVertical = direction === "vertical"
 
-  // Map color names to actual hex values
   const colorMap: Record<string, string> = {
     purple: "#433285",
     "dark-purple": "#241531",
     "light-purple": "#a788b2",
     pink: "#deb3c3",
-    orange: "#241531",
+    orange: "#E5604D",
     "light-orange": "#eb988c",
   }
 
-  const bgColor = colorMap[color] || color
+  const bgColor = color ? colorMap[color] || color : undefined
 
   return (
     <div
@@ -91,16 +83,12 @@ export interface TimelineNodeProps {
   children?: React.ReactNode
 }
 
-/**
- * Node/dot element for timeline markers
- */
 export const TimelineNode: React.FC<TimelineNodeProps> = ({
   size = "20px",
   color = "purple",
   className = "",
   children,
 }) => {
-  // Map color names to actual hex values
   const colorMap: Record<string, string> = {
     purple: "#433285",
     "dark-purple": "#241531",
@@ -130,9 +118,6 @@ export interface TimelineBranchProps {
   children?: React.ReactNode
 }
 
-/**
- * Branch element that extends from a main timeline
- */
 export const TimelineBranch: React.FC<TimelineBranchProps> = ({
   direction,
   length = "100px",
