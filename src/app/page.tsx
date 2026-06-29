@@ -1,11 +1,27 @@
+"use client"
+
 import Image from "next/image"
 import profile from "@/assets/lisaupperud.jpeg"
 import Link from "next/link"
+import { Timeline } from "@/components/timeline"
+import { motion } from "motion/react"
 
 export default function Home() {
   return (
-    <main className="bg-pink min-h-screen max-w-screen flex flex-col justify-center pl-50 gap-15 relative">
-      <div className="flex flex-row items-center gap-20">
+    <main className="bg-pink min-h-screen max-w-screen flex flex-col pt-40 pl-50 gap-15 relative">
+      <Timeline viewBox="0 0 1920 960">
+        <motion.path
+          d="M 430 540 V 740 H 1920"
+          stroke="var(--color-purple)"
+          strokeWidth={10}
+          fill="none"
+          vectorEffect="non-scaling-stroke"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 3, ease: "easeInOut" }}
+        />
+      </Timeline>
+      <div className="flex flex-row items-center gap-20 relative z-10">
         <div className="relative">
           <Image
             src={profile}
@@ -36,15 +52,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="flex items-center ml-37 mt-23 gap-4">
-        <Link href="/menu" className="group">
-          <span className="inline-block text-purple font-heading text-4xl whitespace-nowrap group-hover:-skew-x-12 transition-transform duration-300 ease-in-out">
+      <motion.div
+        className="absolute left-250 z-10"
+        style={{ top: "calc(740 / 960 * 100%)" }}
+        initial={{ opacity: 0, y: "-100%" }}
+        animate={{ opacity: 1, y: "-150%" }}
+        transition={{ delay: 1.2, duration: 0.5, ease: "easeOut" }}
+      >
+        <Link href="/menu" className="group inline-block">
+          <span className="inline-block text-purple font-heading text-4xl whitespace-nowrap group-hover:-skew-x-20 transition-transform duration-300 ease-in-out">
             EXPLORE MY PORTFOLIO
           </span>
         </Link>
-      </div>
-
+      </motion.div>
       <div className="absolute bottom-10 left-10">
         <p className="font-mono text-comment text-sm">
           // status: open to learn
