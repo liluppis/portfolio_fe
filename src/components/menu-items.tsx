@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { TimelineLine } from "./timeline"
 
 interface MenuItemProps {
   number: string
@@ -36,11 +35,6 @@ export function MenuItem({
           </p>
         </div>
       </div>
-      <TimelineLine
-        direction="horizontal"
-        thickness="10px"
-        className="w-full group-hover:bg-orange bg-light-purple transition-colors"
-      />
     </Link>
   )
 }
