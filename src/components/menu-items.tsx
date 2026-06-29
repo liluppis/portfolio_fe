@@ -17,7 +17,7 @@ export function MenuItem({
 }: MenuItemProps) {
   return (
     <Link href={href} className="group block">
-      <div className="flex flex-row justify-items-center items-center gap-15 pl-5 py-8 transition-colors group-hover:bg-background">
+      <div className="flex flex-row justify-items-center items-center gap-15 pl-5 py-8 transition-colors group-hover:bg-background border-b-10 border-light-purple">
         <p className="text-light-purple group-hover:text-orange transition-colors">
           {number}
         </p>

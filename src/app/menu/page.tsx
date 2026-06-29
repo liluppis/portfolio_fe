@@ -1,13 +1,30 @@
 import Link from "next/link"
 import { MenuItem } from "@/components/menu-items"
 import { motion } from "motion/react"
+import { Timeline } from "@/components/timeline"
 
 export default function Menu() {
   return (
     <main className="bg-pink min-h-screen flex flex-col justify-center items-start relative">
-      <div className="flex flex-row w-[750px]">
+      <Timeline viewBox="0 0 1120 720">
+        <path
+          d="M 180 125 V 646"
+          stroke="var(--color-purple)"
+          strokeWidth={10}
+          fill="none"
+          vectorEffect="non-scaling-stroke"
+        />
+        <path
+          d="M 180 641 H 0"
+          stroke="var(--color-purple)"
+          strokeWidth={10}
+          fill="none"
+          vectorEffect="non-scaling-stroke"
+        />
+      </Timeline>
+      <div className="flex flex-row w-[750px] relative z-10 ml-63">
         <div className="flex flex-col">
-          <h1 className="text-purple font-heading text-4xl ml-5 leading-none">
+          <h1 className="text-purple font-heading text-4xl leading-none border-b-10 border-purple pb-4 w-[665px]">
             WHAT WOULD YOU LIKE TO SEE?
           </h1>
 
