@@ -18,16 +18,16 @@ export function MenuItem({
 }: MenuItemProps) {
   return (
     <Link href={href} className="group block">
-      <div className="flex flex-row justify-items-center items-center gap-15 pl-5 transition-colors group-hover:bg-background">
+      <div className="flex flex-row justify-items-center items-center gap-15 pl-5 py-8 transition-colors group-hover:bg-background">
         <p className="text-light-purple group-hover:text-orange transition-colors">
           {number}
         </p>
         <div className="flex flex-row gap-30">
-          <div className="flex flex-col justify-center mt-4">
+          <div className="flex flex-col justify-center">
             <p className="text-comment group-hover:text-orange font-mono text-sm transition-colors">
               {comment}
             </p>
-            <h2 className="text-purple font-heading text-3xl transition-colors">
+            <h2 className="text-purple font-heading text-3xl group-hover:text-purple transition-colors">
               {title}
             </h2>
           </div>
